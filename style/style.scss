@@ -325,6 +325,10 @@ body {
             width: 100%;
             height: 46rem;
             position: relative;
+
+            @include respond(small){
+                object-fit: cover;
+            }
         }
 
         .content {

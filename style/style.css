@@ -281,6 +281,12 @@ body .p.underline1 {
   height: 46rem;
   position: relative;
 }
+@media (max-width: 734px) {
+  #marketing-section #marketing .iphone-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 #marketing-section #marketing .content {
   display: flex;
   flex-direction: column;
