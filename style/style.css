@@ -370,6 +370,8 @@ body .p.underline1 {
 @media (max-width: 734px) {
   #card-section #card .card-img {
     height: 34.25rem;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 #card-section #card .card-content {
@@ -471,8 +473,8 @@ body .p.underline1 {
   #img-slideshow .slide .slide-container .slide-img {
     width: 18.0625rem;
     height: 30.9375rem;
-    -o-object-fit: fill;
-       object-fit: fill;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 #img-slideshow .slide .slide-container .slide-content {

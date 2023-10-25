@@ -309,7 +309,7 @@ body {
     }
 }
 
-//marketing section styling starts here
+//marketing section styling
 #marketing-section {
     display: flex;
     flex-direction: column;
@@ -422,6 +422,7 @@ body {
 
             @include respond(small) {
                 height: 34.25rem;
+                object-fit: cover;
             }
         }
 
@@ -531,7 +532,7 @@ body {
                 @include respond(small) {
                     width: 18.0625rem;
                     height: 30.9375rem;
-                    object-fit: fill;
+                    object-fit: cover;
                 }
             }
 
