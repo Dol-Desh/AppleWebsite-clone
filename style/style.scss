@@ -18,6 +18,8 @@
     --grey2: #424245;
     --grey3: #D2D2D7;
     --grey4: #86868B;
+    --grey5: #e8e8ed;
+    --grey6: #86868b;
 }
 
 @mixin respond($breakpoint) {
@@ -83,7 +85,7 @@ body {
 
     }
 
-    h3 {
+    .h3 {
         color: var(--off-white);
         font-size: 1.75rem;
         line-height: 1.9375rem;
@@ -101,12 +103,19 @@ body {
             color: var(--deep-black);
         }
 
+        .semibold {
+            font-weight: 500;
+        }
+
+        &.bold {
+            font-weight: 600;
+        }
     }
 
     .h4 {
         color: var(--off-white);
-        font-size: 21px;
-        line-height: 26px;
+        font-size: 1.3125rem;
+        line-height: 1.625rem;
         letter-spacing: 0.36px;
         font-weight: 400;
 
@@ -151,6 +160,19 @@ body {
 
     }
 
+    .special {
+        font-size: 1.0625rem;
+        line-height: 1.625rem;
+        font-weight: 500;
+    }
+
+    .h6 {
+        font-size: 0.875rem;
+        line-height: 1.3125rem;
+        font-weight: 400;
+        letter-spacing: -0.37px;
+    }
+
     .p {
         font-size: 0.75rem;
         line-height: 1rem;
@@ -172,9 +194,7 @@ body {
             color: var(--primary-blue);
             text-decoration: underline;
         }
-
     }
-
 }
 
 #top-nav {
@@ -187,10 +207,11 @@ body {
     background-color: #FBFBFD;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 4;
     background: rgba($color: #161617, $alpha: 0.80);
+    backdrop-filter: blur(1.5rem);
 
-    .nav-elements {
+    #nav-elements {
         gap: 1rem;
         color: var(--deep-black);
         display: flex;
@@ -199,6 +220,7 @@ body {
             justify-content: space-between;
             width: 100%;
             gap: 0;
+            padding: 1rem;
         }
 
         @include respond(small) {
@@ -207,7 +229,7 @@ body {
             gap: 0;
         }
 
-        .nav-links {
+        #nav-links {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -215,11 +237,6 @@ body {
 
             img {
                 margin-right: 1rem;
-
-                @include respond(small) {
-                    padding: 0px 1rem 0rem 1rem;
-
-                }
             }
 
             ul {
@@ -253,14 +270,9 @@ body {
         .nav-icons {
             display: flex;
             flex-direction: row;
-            gap: 1rem;
+            gap: 1.5rem;
 
-            @include respond(small) {
-                gap: 2rem;
-                padding-right: 1rem;
-            }
-
-            .hamburger_menu {
+            #hamburger-menu {
                 display: none;
 
                 @include respond(medium) {
@@ -273,11 +285,83 @@ body {
             }
         }
 
+        dialog.modal {
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            max-height: none;
+            background: rgb(29 29 31);
+            padding: 0rem 0.5rem 0rem 2rem;
+
+            .close-action {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                #menu-modal-close, #search-modal-close {
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            ul {
+                li.h3.semibold {
+                    list-style: none;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .search-wrapper {
+                margin-top: 1.5rem;
+                margin-bottom: 3rem;
+                display: flex;
+                align-items: center;
+                padding-right: 2rem;
+
+                img {
+                    padding-right: 0.25rem;
+                    height: 1.75rem;
+                    width: 1.75rem;
+                    color: #86868b;
+                }
+
+                input[type="search"] {
+                    display: flex;
+                    padding: 0rem 0.5rem;
+                    border: none;
+                    outline: none;
+                    background: rgb(29 29 31);
+                    font-size: 1.75rem;
+                    font-weight: 500;
+                    color: var(--white);
+                    width: 100%;
+                }
+
+            }
+
+            .special {
+                color: var(--white);
+                list-style: none;
+                margin-bottom: 1rem;
+                display: flex;
+                align-items: center;
+
+                img {
+                    margin-right: 0.5rem;
+                }
+
+                &:first-child {
+                    color: var(--grey6);
+                    font-weight: 400;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
     }
 }
 
 #top-banner {
-    margin-top: 48px;
+    margin-top: 3rem;
     width: 100%;
     padding: 0.75rem 1.5rem 0.75rem 1.5rem;
     background-color: var(--white);
@@ -289,11 +373,9 @@ body {
     top: 0;
     z-index: 0;
 
-    p {
-        font-size: 0.875rem;
-        font-weight: 100;
+    .h6 {
         color: var(--deep-black);
-        margin-right: 8px;
+        margin-right: 0.5rem;
     }
 
     a {
@@ -305,7 +387,7 @@ body {
     }
 
     img {
-        margin-left: 4px;
+        margin-left: 0.25rem;
     }
 }
 
@@ -326,7 +408,7 @@ body {
             height: 46rem;
             position: relative;
 
-            @include respond(small){
+            @include respond(small) {
                 object-fit: cover;
             }
         }
@@ -352,7 +434,7 @@ body {
             .links {
                 display: flex;
                 flex-direction: row;
-                gap: 40px;
+                gap: 2.5rem;
 
                 @include respond(small) {
                     gap: 2rem;
@@ -438,7 +520,7 @@ body {
             position: absolute;
             top: 3.5rem;
 
-            @include respond(small){
+            @include respond(small) {
                 padding: 0rem 1.25rem 0rem 1.25rem;
             }
 
@@ -479,7 +561,7 @@ body {
             .links {
                 display: flex;
                 flex-direction: row;
-                gap: 40px;
+                gap: 2.5rem;
 
                 a {
                     display: flex;
@@ -710,24 +792,24 @@ body {
                 }
             }
 
-            p{
+            p {
 
-                @include respond(medium){
+                @include respond(medium) {
                     margin-top: 1rem;
                 }
 
-                @include respond(small){
+                @include respond(small) {
                     margin-top: 1rem;
                 }
             }
 
-            hr{
+            hr {
 
-                @include respond(medium){
+                @include respond(medium) {
                     display: none;
                 }
 
-                @include respond(small){
+                @include respond(small) {
                     display: none;
                 }
             }

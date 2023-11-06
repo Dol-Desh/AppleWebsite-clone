@@ -16,9 +16,9 @@
 
     <!--navigation-->
     <nav id="top-nav">
-        <div class="nav-elements">
-            <div class="nav-links">
-                <img src="images/apple_logo.svg" alt="apple_logo">
+        <div id="nav-elements">
+            <div id="nav-links">
+                <img src="images/apple_logo.svg" alt="apple logo">
                 <ul>
                     <li>Store</li>
                     <li>Mac</li>
@@ -35,17 +35,58 @@
             </div>
 
             <div class="nav-icons">
-                <img src="images/search.svg" alt="search">
+                <img id="search-menu" src="images/search.svg" alt="search">
                 <img src="images/shopping_bag.svg" alt="shopping bag">
-                <img class="hamburger_menu" src="images/hamburger.svg" alt="hamburger menu">
+                <img id="hamburger-menu" src="images/hamburger.svg" alt="hamburger menu">
             </div>
+
+            <dialog id="menu-modal" class="modal">
+                <div class="close-action">
+                    <img id="menu-modal-close" src="images/x_close.svg" alt="close modal">
+                </div>
+                <ul>
+                    <li class="h3 semibold">Store</li>
+                    <li class="h3 semibold">Mac</li>
+                    <li class="h3 semibold">iPad</li>
+                    <li class="h3 semibold">iPhone</li>
+                    <li class="h3 semibold">Watch</li>
+                    <li class="h3 semibold">Vision</li>
+                    <li class="h3 semibold">Airpods</li>
+                    <li class="h3 semibold">TV & Home</li>
+                    <li class="h3 semibold">Entertainment</li>
+                    <li class="h3 semibold">Accesories</li>
+                    <li class="h3 semibold">Support</li>
+                </ul>
+            </dialog>
+
+            <dialog id="search-modal" class="modal"> 
+                <div class="close-action">
+                    <img id="search-modal-close" class="" src="images/x_close.svg" alt="close modal">
+                </div>
+
+                <form class="search-wrapper">
+                    <img src="images/search-modal.svg" alt="search icon">
+                    <input class="input" id="input" type="search" placeholder="Search" autofocus="off" required>
+                </form>
+
+                <ul>
+                    <li class="special">Quick links</li>
+                    <li class="special"><img src="images/arrow_right.svg" alt="right arrow">Holiday Gifts</li>
+                    <li class="special"><img src="images/arrow_right.svg" alt="right arrow">Find a Store</li>
+                    <li class="special"><img src="images/arrow_right.svg" alt="right arrow">Apple Gift Card</li>
+                    <li class="special"><img src="images/arrow_right.svg" alt="right arrow">Apple Vision Pro</li>
+                    <li class="special"><img src="images/arrow_right.svg" alt="right arrow">Apple Trade In</li>
+                </ul>
+            </dialog>
+
         </div>
     </nav>
 
     <!--top banner-->
     <section id="top-banner">
-        <p>Save on Mac or iPad with education pricing and get a gift card up to $150. Gift card offer ends October 2.
-        </p>
+        <h6 class="h6">Save on Mac or iPad with education pricing and get a gift card up to $150. Gift card offer ends
+            October 2.
+        </h6>
         <a href="">Shop now<img src="images/chevron_right.svg" alt="chevron_right"></a>
     </section>
 
@@ -432,7 +473,7 @@
                     <div>
                         <p class="p">United States</p>
                     </div>
-                    
+
                 </div>
 
             </div>
@@ -441,6 +482,7 @@
 
     </footer>
 
+    <script src="index.js"></script>
 </body>
 
 </html>
