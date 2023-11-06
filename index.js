@@ -16,8 +16,3 @@ function setupModal(modalId, openModalId, closeModalId) {
 
 setupModal("menu-modal", "hamburger-menu", "menu-modal-close");
 setupModal("search-modal", "search-menu", "search-modal-close");
-
-window.addEventListener("DOMContentLoaded", function () {
-  const input = document.getElementById("search-input");
-  input.blur();
-});
